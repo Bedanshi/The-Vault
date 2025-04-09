@@ -1,0 +1,210 @@
+
+$primary: #184392;
+$gray: #E6E6E6;
+
+$theme-colors:(
+  "primary": $primary,
+  "gray": $gray
+);
+
+
+$custom-color:(
+  "icon-background": #5c8ce49d
+);
+
+//Merge maps
+$theme-colors:map-merge($theme-colors, $custom-color);
+
+@import "../bootstrap/scss/bootstrap";
+
+
+
+/******HEADER *******/
+
+.announcement-bar{
+
+font-size: 0.8rem;
+border-bottom: 1px solid var(--bs-gray);
+
+
+
+&__list{
+  padding:o;
+  margin:0;
+  list-style-type: none;
+  display: inline-flex;
+  margin: 0 -10px;
+
+  li{
+    margin: 0 10px;
+    display:flex;
+    align-items:center;
+
+    .bi{
+      background-color: var(--bs-icon-background);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      margin-right: 6px;
+    }
+   }
+  }
+
+    @include media-breakpoint-down(lg){
+  display: none;
+  }
+}
+
+
+
+
+.siteheader
+{
+  .aws-search-field{
+    font-size: 0.9rem;
+    padding-left: 1.4rem;
+    border-radius: 20px !important;
+  }
+}
+
+.main-navigation{
+  height: 45px;
+  text-align: center;
+  .current-menu-item{
+    background-color: #184392;
+  }
+
+a{
+    color: white !important;
+    padding: 0.5rem 1.4rem;
+
+  }
+
+  a:hover{
+    background-color:#376dd3;
+
+    }
+
+
+    .menu-toggle{
+      background-color: $primary;
+      color:#E6E6E6;
+      border: none;
+    }
+    .sub-menu{
+      display: flex;
+      flex-direction: column;
+      li{
+        background-color: $primary;
+        padding: 10px;
+        margin-top: 1px;
+        border-radius: 2px;
+
+       a:hover{
+        background-color: #2954a55a;
+       }
+      }
+    }
+}
+
+
+
+/*******SLIDER********/
+
+.carousel-image{
+  opacity: 0.9;
+  height: 600px;
+  width:300px;
+  object-fit: cover;
+
+}
+
+
+.carousel-caption{
+    color: #ffff;
+    background-color: rgba(0, 0, 0, 0.568);
+    margin-bottom: -18px;
+
+    a{
+      color: #fffdfd;
+      background-color: #355da8;
+    }
+}
+.carousel-item active{
+  object-fit: contain ;
+}
+
+/*******CATEGORIES********/
+
+.categories{
+  p{
+    text-align: center;
+  }
+}
+.categories{
+  background-color: #e7e2e2;
+
+  .categories_col{
+
+      width: 100%;
+
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .image-categories{
+        height:400px;
+        position: relative;
+
+
+        .image-categories-text{
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          background-color: #0f57dd88;
+          width: 100%;
+          color:#E6E6E6;
+          text-align: center;
+          padding: 5px;
+        }
+      }
+
+    }
+
+
+
+
+}
+
+
+/*******FOOTER********/
+
+.site-footer{
+  .menu{
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+
+
+    a{
+      color:white;
+      text-decoration: none;
+      display: block;
+      padding:0.3rem;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.woocommerce-ordering{
+  .orderby{
+    padding: 15px;
+    align-items: center;
+
+  }
+}
